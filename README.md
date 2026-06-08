@@ -1,69 +1,61 @@
-# React + TypeScript + Vite
+# 🚀 App Front (React + Vite + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern frontend application built with **React 19**, **Vite**, and **TypeScript**, featuring a scalable architecture and a rich UI ecosystem.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Tech Stack
 
-## Expanding the ESLint configuration
+### Core
+- React 19
+- Vite
+- TypeScript
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### State Management
+- Zustand (global state)
+- React Query (@tanstack/react-query) (server state)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### UI & Styling
+- Tailwind CSS v4
+- Radix UI (headless components)
+- Lucide React (icons)
+- Framer Motion (animations)
+- clsx + tailwind-merge
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Forms & Validation
+- Formik
+- Yup
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Networking
+- Axios
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Routing
+- React Router DOM v7
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Maps
+- Leaflet + React Leaflet
+- Neshan Maps Platform
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Utilities
+- date-fns
+- moment + moment-jalaali
+- sonner + react-toastify (notifications)
+- sweetalert2
+- swiper / embla-carousel
+
+---
+
+## 📁 Project Structure
+
+```bash
+src/
+│
+├── assets/        # Static assets (images, fonts, etc.)
+├── components/    # Reusable UI components
+├── pages/         # Application pages
+├── hooks/         # Custom React hooks
+├── services/      # API layer (Axios requests)
+├── store/         # Zustand stores
+├── utils/         # Helper functions
+├── routes/        # Routing configuration
+└── main.tsx       # Application entry point
